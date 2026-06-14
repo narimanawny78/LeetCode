@@ -1,0 +1,27 @@
+var topKFrequent = function(nums, k) {
+    let map = new Map();
+
+    for(let i = 0 ; i< nums.length;i++){
+        if(!map.has(nums[i])){
+            map.set(nums[i], 1)
+        }else{
+            map.set(nums[i],map.get(nums[i] ) +1)
+        }
+    }
+
+    let mapSort = new Map([...map.entries()].sort((a,b) => b[1] - a[1]))
+
+    let result = [];
+    let count = 0;
+
+    for(let [key, val] of mapSort.entries()){
+        if(count < k){
+            result.push(key)
+            count++
+        }
+    }
+
+    return result;
+
+
+};
