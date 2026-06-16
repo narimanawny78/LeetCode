@@ -25,3 +25,23 @@ var topKFrequent = function(nums, k) {
 
 
 };
+
+
+// // let freq = new Map();
+
+    // for(let i = 0 ; i< nums.length;i++){
+    //     if(!freq.has(nums[i])){
+    //         freq.set(nums[i], 1)
+    //     }else{
+    //         freq.set(nums[i], freq.get(nums[i]) + 1)
+    //     }
+    // }
+
+    
+    // const arr = [...freq.entries()];
+
+    // arr.sort((a, b) => b[1] - a[1]);
+
+    // return arr
+    //     .slice(0, k)
+    //     .map(item => item[0]);
